@@ -31,10 +31,12 @@ function CharacterDetailsPage() {
   const [films, setFilms] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
 
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+
   useEffect(() => {
     const fetchCharacter = async () => {
       try {
-        const res = await fetch(`https://swapi.py4e.com/api/people/${id}/`)
+        const res = await fetch(`${apiBaseUrl}/api/people/${id}/`)
         const data: CharacterDetails & { detail?: string } = await res.json()
 
         if (data.detail === 'Not found') {

@@ -215,7 +215,7 @@ Allow: GET, HEAD, OPTIONS
 
 The application requires some environment variables to be set.
 
--   `COINGECKO_API_TOKEN`: API token for accessing the CoinGecko API.
+-   `VITE_API_BASE_URL`: API token for accessing the Swapi API.
 
 ## License
 
