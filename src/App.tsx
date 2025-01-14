@@ -1,37 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import '@fontsource/roboto/500.css';
-import Button from '@mui/material/Button';
+import { Routes, Route } from 'react-router-dom'
+
+import MainLayout from './layouts/MainLayout.tsx'
+import HomePage from './pages/HomePage.tsx'
+import CharactersPage from './pages/CharactersPage.tsx'
+import CharacterDetailsPage from './pages/CharacterDetailsPage.tsx'
+import ContactPage from './pages/ContactPage.tsx'
+import NotFoundPage from './pages/NotFoundPage.tsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <Button variant="contained">Hello world</Button>
-    </>
+    <Routes>
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<HomePage />} />
+        <Route path="search" element={<CharactersPage />} />
+        <Route path="character/:id" element={<CharacterDetailsPage />} />
+        <Route path="contact" element={<ContactPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   )
 }
 
