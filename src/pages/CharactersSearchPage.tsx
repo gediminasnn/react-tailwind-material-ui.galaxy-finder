@@ -22,7 +22,7 @@ interface StarWarsCharacter {
   url: string
 }
 
-function CharactersPage() {
+function CharactersSearchPage() {
   const { t } = useTranslation()
   const [query, setQuery] = useState('')
   const [characters, setCharacters] = useState<StarWarsCharacter[]>([])
@@ -73,7 +73,7 @@ function CharactersPage() {
           {t('searchCharactersHeading')}
         </Typography>
 
-        <Grid2 container spacing={3} className="mb-4" alignItems="center">
+        <Grid2 container spacing={3} alignItems="center">
           <Grid2 size={12}>
             <TextField
               label={t('characterNameLabel')}
@@ -128,4 +128,4 @@ function CharactersPage() {
   )
 }
 
-export default CharactersPage
+export default CharactersSearchPage

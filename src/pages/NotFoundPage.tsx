@@ -16,7 +16,7 @@ function NotFoundPage() {
         {t('notFoundSubtitle')}
       </Typography>
       <Button variant="contained" color="secondary" component={Link} to="/">
-        {t('goHome')}
+        {t('goHome')}F
       </Button>
     </section>
   )

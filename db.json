@@ -1,0 +1,17 @@
+{
+  "characters": [
+    {
+      "id": "a27f",
+      "name": "Captain Stellar",
+      "height": "185",
+      "mass": "78",
+      "hair_color": "Silver",
+      "skin_color": "Pale",
+      "eye_color": "Blue",
+      "birth_year": "23BBY",
+      "gender": "Male",
+      "homeworld": "Nebula Prime",
+      "films": "Guardians of the Nebula, Stellar Wars: The Awakening"
+    }
+  ]
+}

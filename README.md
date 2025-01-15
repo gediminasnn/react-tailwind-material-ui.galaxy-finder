@@ -1,7 +1,7 @@
 # Galaxy Finder - Star Wars Character Manager Application
-![image](https://github.com/user-attachments/assets/5a6913b8-1f8c-480b-8495-969a5409cd94)
+![image](https://github.com/user-attachments/assets/ea06c383-2379-48d9-8440-c29be42ac734)
 
-This is a responsive React application that allows users to search for Star Wars characters, view their details, and submit a contact form. The application uses React Router for navigation and Material-UI and Tailwind CSS for styling. The app is built to be responsive and works well on mobile devices.
+This is a responsive React application that allows users to search for Star Wars characters, create custom ones, view their details, and submit a contact form. The application uses React Router for navigation and Material-UI and Tailwind CSS for styling. The app is built to be responsive and works well on mobile devices.
 
 ## Prerequisites
 
@@ -69,40 +69,69 @@ By completing these steps, you will have fully set up your Star Wars Character M
 ### Home Page
 - The homepage provides a brief introduction to the app and highlights the main features such as the character search and contact form. It is the first page users see when they visit the app.
   
-  ![image](https://github.com/user-attachments/assets/5a6913b8-1f8c-480b-8495-969a5409cd94)
+  ![image](https://github.com/user-attachments/assets/ea06c383-2379-48d9-8440-c29be42ac734)
 
 ### Character Search Page
 - The search page allows users to search for characters by name.
 - Results are displayed in a dropdown, and clicking on a character opens a detailed view.
 
-  ![image](https://github.com/user-attachments/assets/6b9fc234-c021-494a-a1ec-812b4adea365)
+  ![image](https://github.com/user-attachments/assets/16a42e2f-2f78-49c4-a3d5-5992eada098a)
 
 ### Character Details Page
 - Clicking on a character's name opens a new page displaying their details, such as their homeworld and the films they appear in.
 
-  ![image](https://github.com/user-attachments/assets/edc00a7d-370d-4d9d-a9b7-1cd8c2f0c86a)
+  ![image](https://github.com/user-attachments/assets/bbe093c8-3f3c-4436-8ba2-a24dd15274dd)
 
 ### Contact Form
 - Users can submit their name, email, and message.
 - The form includes validation, and successfully submitted forms are stored in `localStorage`.
 
-  ![image](https://github.com/user-attachments/assets/a2001b58-3c6b-43bd-a101-3927463f22b3)
+  ![image](https://github.com/user-attachments/assets/e0c75991-199b-4849-8edd-2f7be6a1ebea)
 
 ### Navigation
 - The app uses React Router for page navigation.
 - The navigation bar includes links to Home, Search, and Contact pages.
 - Active routes are highlighted in the navigation bar.
 
-  ![image](https://github.com/user-attachments/assets/c52e2aa3-f243-478d-8b05-67e5109160c6)
+  ![image](https://github.com/user-attachments/assets/1d1dbf77-be55-4931-8522-2d7c044ac66c)
 
 - **Responsive Layout**: The navigation bar adapts to different screen sizes, ensuring a seamless experience on mobile and desktop devices.
 
-  ![image](https://github.com/user-attachments/assets/5bbf8137-d77e-448c-857b-bb9ba65ac402)
+  ![image](https://github.com/user-attachments/assets/fb45893f-2f3f-4b3c-9ac5-a1c1dce3b381)
 
-### Responsive Design
-- The app is fully responsive, with mobile-first design, and works well on tablet-sized screens as well.
+### Custom Characters CRUD
 
-  ![image](https://github.com/user-attachments/assets/0c27d708-21ce-4ff3-80ac-d0319cec5095)
+The app includes full CRUD functionality for managing custom Star Wars characters:
+
+#### View Custom Characters List
+
+- Users can view custom characters list.
+
+  ![image](https://github.com/user-attachments/assets/9c8bb1d7-790c-4a16-9bc0-6ac993e1b790)
+
+#### View Custom Character
+
+- Users can view selected custom character information.
+
+  ![image](https://github.com/user-attachments/assets/74487248-cb67-4acb-943b-264c301d0818)
+
+#### Add New Custom Character
+
+- Users can add custom characters with details such as name, height, mass, hair color, eye color, skin color, birth year, gender, homeworld, and associated films.
+
+  ![image](https://github.com/user-attachments/assets/8b6b5b2d-4151-4299-a3e9-1e5ebed58427)
+
+#### Edit Existing Custom Character
+
+- Edit any previously added custom character details.
+
+  ![image](https://github.com/user-attachments/assets/8b6b5b2d-4151-4299-a3e9-1e5ebed58427)
+
+#### Delete Custom Character
+
+- Characters can be deleted individually. Confirmation prompts ensure accidental deletions are avoided.
+
+  ![image](https://github.com/user-attachments/assets/f5b06eec-7e51-438d-9194-a8328300dc4a)
 
 ### Bonus Features
 - **Typescript**: The app is built with TypeScript for type safety.
@@ -112,7 +141,7 @@ By completing these steps, you will have fully set up your Star Wars Character M
 
 - **i18n**: The app includes internationalization support for different languages.
 
-  ![image](https://github.com/user-attachments/assets/a06da91f-f4a4-4599-b466-4b69ab62b143)
+  ![image](https://github.com/user-attachments/assets/a63d3b68-083e-4aac-a1e7-e7ccb1a57c23)
 
 ### API Integration
 
