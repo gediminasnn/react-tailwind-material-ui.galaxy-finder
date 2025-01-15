@@ -66,6 +66,17 @@ By completing these steps, you will have fully set up your Star Wars Character M
 
 ## Features
 
+### Navigation
+- The app uses React Router for page navigation.
+- The navigation bar includes links to Home, Search, and Contact pages.
+- Active routes are highlighted in the navigation bar.
+
+  ![image](https://github.com/user-attachments/assets/1d1dbf77-be55-4931-8522-2d7c044ac66c)
+
+- **Responsive Layout**: The navigation bar adapts to different screen sizes, ensuring a seamless experience on mobile and desktop devices.
+
+  ![image](https://github.com/user-attachments/assets/fb45893f-2f3f-4b3c-9ac5-a1c1dce3b381)
+
 ### Home Page
 - The homepage provides a brief introduction to the app and highlights the main features such as the character search and contact form. It is the first page users see when they visit the app.
   
@@ -80,24 +91,11 @@ By completing these steps, you will have fully set up your Star Wars Character M
 ### Character Details Page
 - Clicking on a character's name opens a new page displaying their details, such as their homeworld and the films they appear in.
 
-  ![image](https://github.com/user-attachments/assets/bbe093c8-3f3c-4436-8ba2-a24dd15274dd)
+  ![image](https://github.com/user-attachments/assets/49329be6-a381-42ab-a30f-46e892bbba63)
 
-### Contact Form
-- Users can submit their name, email, and message.
-- The form includes validation, and successfully submitted forms are stored in `localStorage`.
+- Clicking the "Copy Character" button redirects to the "Copy Character Page," where the selected character's details are preloaded into a form. Users can modify the character's details and save it as a new custom character.
 
-  ![image](https://github.com/user-attachments/assets/e0c75991-199b-4849-8edd-2f7be6a1ebea)
-
-### Navigation
-- The app uses React Router for page navigation.
-- The navigation bar includes links to Home, Search, and Contact pages.
-- Active routes are highlighted in the navigation bar.
-
-  ![image](https://github.com/user-attachments/assets/1d1dbf77-be55-4931-8522-2d7c044ac66c)
-
-- **Responsive Layout**: The navigation bar adapts to different screen sizes, ensuring a seamless experience on mobile and desktop devices.
-
-  ![image](https://github.com/user-attachments/assets/fb45893f-2f3f-4b3c-9ac5-a1c1dce3b381)
+  ![image](https://github.com/user-attachments/assets/298100bf-2398-4a1c-adb9-670dbf9c3eef)
 
 ### Custom Characters CRUD
 
@@ -107,13 +105,13 @@ The app includes full CRUD functionality for managing custom Star Wars character
 
 - Users can view custom characters list.
 
-  ![image](https://github.com/user-attachments/assets/9c8bb1d7-790c-4a16-9bc0-6ac993e1b790)
+  ![image](https://github.com/user-attachments/assets/10a9b9f4-c9e0-4da2-9b79-8ec14f141452)
 
 #### View Custom Character
 
 - Users can view selected custom character information.
 
-  ![image](https://github.com/user-attachments/assets/74487248-cb67-4acb-943b-264c301d0818)
+  ![image](https://github.com/user-attachments/assets/2367ad67-b7c2-4d13-b985-5eadb5f417f0)
 
 #### Add New Custom Character
 
@@ -131,13 +129,19 @@ The app includes full CRUD functionality for managing custom Star Wars character
 
 - Characters can be deleted individually. Confirmation prompts ensure accidental deletions are avoided.
 
-  ![image](https://github.com/user-attachments/assets/f5b06eec-7e51-438d-9194-a8328300dc4a)
+  ![image](https://github.com/user-attachments/assets/b4edfeae-504d-4a22-b823-87db9db93902)
+
+### Contact Form
+- Users can submit their name, email, and message.
+- The form includes validation, and successfully submitted forms are stored in `localStorage`.
+
+  ![image](https://github.com/user-attachments/assets/e0c75991-199b-4849-8edd-2f7be6a1ebea)
 
 ### Bonus Features
 - **Typescript**: The app is built with TypeScript for type safety.
 - **Loading Spinner**: A loading spinner is displayed while fetching data from the SWAPI.
 
-  ![image](https://github.com/user-attachments/assets/473fdfdd-d5f2-40fc-b4ca-aa954909e4de)
+  ![image](https://github.com/user-attachments/assets/997a4f84-2dbb-4d0a-8f45-864a731b2d1a)
 
 - **i18n**: The app includes internationalization support for different languages.
 

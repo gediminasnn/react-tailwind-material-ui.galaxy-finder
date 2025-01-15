@@ -12,6 +12,19 @@
       "gender": "Male",
       "homeworld": "Nebula Prime",
       "films": "Guardians of the Nebula, Stellar Wars: The Awakening"
+    },
+    {
+      "id": "cca3",
+      "name": "Lorem Ipsum",
+      "height": "212",
+      "mass": "awef",
+      "hair_color": "awef",
+      "skin_color": "awef",
+      "eye_color": "awef",
+      "birth_year": "awef",
+      "gender": "awef",
+      "homeworld": "Nebula Prime",
+      "films": "awef"
     }
   ]
 }

@@ -63,5 +63,6 @@
     "edit": "Redaguoti",
     "delete": "Ištrinti",
     "cancelButtonLabel": "Atšaukti",
-    "homeWorld": "Gimtinė"
+    "homeWorld": "Gimtinė",
+    "copyCharacterButtonLabel": "Kopijuoti kaip tavo veikėją"
 }

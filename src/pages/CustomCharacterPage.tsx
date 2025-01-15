@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { CircularProgress, Card, CardContent, Typography } from '@mui/material';
+import { useNavigate, useParams } from 'react-router-dom';
+import { CircularProgress, Card, CardContent, Typography, Box, Stack, Button } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 import CharacterListing from '../components/CharacterListing.tsx';
 import { CharacterDetails } from '../interfaces/CharacterDetails.tsx';
 
-function CustomCharacterDetailsPage() {
+function CustomCharacterPage() {
   const { id } = useParams();
   const [character, setCharacter] = useState<CharacterDetails | null>(null);
   const [loading, setLoading] = useState(true);
+
+  const navigate = useNavigate();
 
   const { t } = useTranslation();
 
@@ -48,12 +50,28 @@ function CustomCharacterDetailsPage() {
   }
 
   return (
-    <Card>
-      <CardContent>
-        <CharacterListing character={character} />
-      </CardContent>
-    </Card>
+    <Box sx={{ padding: 0 }}>
+      <Stack
+        direction="row"
+        spacing={1}
+        sx={{ marginBottom: 2 }}
+        justifyContent="flex-start"
+      >
+        <Button
+          variant="outlined"
+          color="secondary"
+          onClick={() => navigate(-1)}
+        >
+          {t('cancelButtonLabel')}
+        </Button>
+      </Stack>
+      <Card>
+        <CardContent>
+          <CharacterListing character={character} />
+        </CardContent>
+      </Card>
+    </Box>
   );
 }
 
-export default CustomCharacterDetailsPage;
+export default CustomCharacterPage;

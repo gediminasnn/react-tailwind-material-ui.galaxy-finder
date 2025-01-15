@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { Button, Card, CardContent } from '@mui/material';
+import { Button, Card, CardContent, Stack, Box } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 import CharacterListing from '../components/CharacterListing.tsx';
@@ -8,7 +8,7 @@ import { CharacterDetails } from '../interfaces/CharacterDetails.tsx';
 import LoadingSpinner from '../components/LoadingSpinner.tsx';
 import ErrorMessage from '../components/ErrorMessage.tsx';
 
-function CharacterDetailsPage() {
+function CharacterPage() {
   const { id } = useParams();
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -35,8 +35,8 @@ function CharacterDetailsPage() {
 
         const filmTitles = data.films && data.films.length > 0
           ? await Promise.all(
-            data.films.map((filmUrl) => fetch(filmUrl).then((r) => r.json()))
-          ).then((films) => films.map((film) => film.title))
+              data.films.map((filmUrl) => fetch(filmUrl).then((r) => r.json()))
+            ).then((films) => films.map((film) => film.title))
           : [];
 
         setCharacter({
@@ -57,21 +57,40 @@ function CharacterDetailsPage() {
   if (loading) return <LoadingSpinner />;
   if (!character) return <ErrorMessage message={t('"characterNotFound')} />;
 
+  const handleCopyCharacter = () => {
+    navigate('/character/copy', { state: { character } });
+  };
+
   return (
-    <Card>
-      <CardContent>
-        <CharacterListing character={character} />
-      </CardContent>
-      <Button
+    <Box sx={{ padding: 0 }}>
+      <Stack
+        direction="row"
+        spacing={1}
+        sx={{ marginBottom: 2 }}
+        justifyContent="flex-start"
+      >
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={handleCopyCharacter}
+        >
+          {t('copyCharacterButtonLabel')}
+        </Button>
+        <Button
           variant="outlined"
           color="secondary"
-          sx={{ mt: 2 }}
           onClick={() => navigate(-1)}
         >
           {t('cancelButtonLabel')}
         </Button>
-    </Card>
+      </Stack>
+      <Card>
+        <CardContent>
+          <CharacterListing character={character} />
+        </CardContent>
+      </Card>
+    </Box>
   );
 }
 
-export default CharacterDetailsPage;
+export default CharacterPage;

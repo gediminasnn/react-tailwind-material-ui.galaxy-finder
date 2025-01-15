@@ -63,5 +63,6 @@
     "edit": "Edit",
     "delete": "Delete",
     "cancelButtonLabel": "Cancel",
-    "homeWorld": "Homeworld"
+    "homeWorld": "Homeworld",
+    "copyCharacterButtonLabel": "Copy as a Custom Character"
 }
